@@ -1,0 +1,120 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: rgb(44, 41, 38);   
+}
+
+a {
+    text-decoration: none;
+}
+
+#main-header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 26, 24);
+    padding: 0 5%;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(238, 164, 80);
+    text-transform: uppercase;
+}
+
+#main-header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#main-header li {
+    margin: 0 1rem;
+}
+
+#main-header nav a {
+    color: rgb(185, 131, 31);
+    font-size: 1.25rem;
+}
+
+#main-header nav a:hover {
+    color: rgb(228, 163, 44);
+
+}
+
+main h1 {
+    text-align: center;
+    color: rgb(238, 164, 80);
+    font-size: 3rem;
+}
+
+#latest-products {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+#latest-products ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.food-item {
+    background-color: rgb(228, 206, 182);
+    border-radius: 6px;
+    overflow: hidden;
+    
+}
+
+.food-item img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.food-item-content {
+    /* padding: 16px; */
+    /* padding: 10%; */
+    /* padding: 0.1em; */ 
+    /* em 유닛은 요소 자체의 폰트 크기 기반으로 계산. 
+    em 유닛을 폰트 크기가 아닌 속성에 사용하면 em 유닛의 계산 결과는 실제 요소의 폰트 크기에 기반해서 도출.
+    글자 그기가 200%(32px)이면 패딩 em은 32 * 0.1 
+    rem은 200%으로 설정한 게 중요한 게 아니라 브라우저에서 설정한 font size 16px이 중요함. */
+    text-align: center;
+
+}
+
+h2 {
+    /* font-size: 100%; */
+    font-size: 2rem;
+    /* rem 유닛은 항상 최상위(HTML) 요소를 참조. 폰트 크기의 유동성 증가. 기기 별 픽셀 차이 영향 X.  */
+}
+
+.btn {
+    background-color: rgb(228, 157, 44);
+    color: white;
+    border-radius: 4px;
+    padding: 8px 24px;
+}
+
+.btn:hover {
+    background-color: rgb(221, 134, 34);
+}
+
+
+
+
+
+
+
+/* 
+%는 항상 부모 요소를 참조하고
+rem은 최상위 요소(html)의 폰트 크기를 참조 (크롬에서 사용자가 설정한 폰트 크기)
+em은 그 요소의 실제 폰트 크기 참조 (크롬에서 사용자가 설정한 폰트 크기 * 개발자가 설정한 폰트 크기 비율)
+*/
