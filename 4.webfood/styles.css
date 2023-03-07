@@ -59,7 +59,7 @@ main h1 {
 #latest-products ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 1rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -67,52 +67,57 @@ main h1 {
 
 .food-item {
     background-color: rgb(228, 206, 182);
-    border-radius: 6px;
+    border-radius: 6px; /* border를 다이나믹하게 만들면 경계선 곡률이 늘어남. 요소가 커져도 곡률은 유지*/
     overflow: hidden;
     
 }
 
 .food-item img {
-    height: 240px;
+    height: 15rem;
     width: 100%;
     object-fit: cover;
 }
 
 .food-item-content {
-    /* padding: 16px; */
-    /* padding: 10%; */
-    /* padding: 0.1em; */ 
-    /* em 유닛은 요소 자체의 폰트 크기 기반으로 계산. 
-    em 유닛을 폰트 크기가 아닌 속성에 사용하면 em 유닛의 계산 결과는 실제 요소의 폰트 크기에 기반해서 도출.
-    글자 그기가 200%(32px)이면 패딩 em은 32 * 0.1 
-    rem은 200%으로 설정한 게 중요한 게 아니라 브라우저에서 설정한 font size 16px이 중요함. */
+    padding: 1em; 
     text-align: center;
 
-}
-
-h2 {
-    /* font-size: 100%; */
-    font-size: 2rem;
-    /* rem 유닛은 항상 최상위(HTML) 요소를 참조. 폰트 크기의 유동성 증가. 기기 별 픽셀 차이 영향 X.  */
 }
 
 .btn {
     background-color: rgb(228, 157, 44);
     color: white;
     border-radius: 4px;
-    padding: 8px 24px;
+    padding: 0.5rem 1.5rem;
 }
 
 .btn:hover {
     background-color: rgb(221, 134, 34);
 }
 
+@media (max-width: 48rem) {
+    #main-header nav {
+        display: none;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    #latest-products ul {
+        grid-template-columns: 100%;
+    }
+} /* media query는 항상 원래 코드 아래에 있어야 함. media query가 위에 있으면 코드를 읽을 때 밑에서 덮어쓰여짐. */
 
 
 
 
 
-
+  
+/* em 유닛은 요소 자체의 폰트 크기 기반으로 계산. 
+em 유닛을 폰트 크기가 아닌 속성에 사용하면 em 유닛의 계산 결과는 실제 요소의 폰트 크기에 기반해서 도출.
+글자 그기가 200%(32px)이면 패딩 em은 32 * 0.1 
+rem은 200%으로 설정한 게 중요한 게 아니라 브라우저에서 설정한 font size 16px이 중요함. */
 /* 
 %는 항상 부모 요소를 참조하고
 rem은 최상위 요소(html)의 폰트 크기를 참조 (크롬에서 사용자가 설정한 폰트 크기)
